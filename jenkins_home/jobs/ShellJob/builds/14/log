@@ -1,0 +1,9 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ShellJob
+[ShellJob] $ /bin/sh -xe /tmp/jenkins4435928993971727438.sh
++ /tmp/script.sh Sahil Gulati
+To print your name select show options
++ echo Would you like to have Tea
+Would you like to have Tea
+Finished: SUCCESS

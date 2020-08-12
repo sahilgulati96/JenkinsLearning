@@ -1,0 +1,14 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ShellJob
+[ShellJob] $ /bin/sh -xe /tmp/jenkins581124718353797285.sh
++ Name=Sahil
++ echo Sahil
+Sahil
++ date
++ echo Hi Sahil, Current Date is Wed Aug 12 08:01:17 UTC 2020
+Hi Sahil, Current Date is Wed Aug 12 08:01:17 UTC 2020
++ tmp/script.sh sahil gualti
+/tmp/jenkins581124718353797285.sh: 6: /tmp/jenkins581124718353797285.sh: tmp/script.sh: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
