@@ -8,6 +8,14 @@ services:
             - ./jenkins_home:/var/jenkins_home
         networks: 
             - net
+
+    remotehost:
+        build: 
+            dockerfile: dockerfile
+            context: ./centos
+        container_name: opensshServer
+        networks: 
+            - net   
 networks: 
     net:
         
