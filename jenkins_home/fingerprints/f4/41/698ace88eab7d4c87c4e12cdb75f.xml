@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-12 12:59:20.560 UTC</timestamp>
+  <md5sum>f441698ace88eab7d4c87c4e12cdb75f</md5sum>
+  <fileName>Credential id=db_password name=Password for MySQL database</fileName>
+  <usages>
+    <entry>
+      <string>UploadtoS3</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

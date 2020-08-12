@@ -1,0 +1,40 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/UploadtoS3
+[SSH] script:
+MySqldb_host="db_host"
+mysql_password=**********
+MySqldb_name="testdb"
+aws_s3_bucket="jenkins-mysql-backup2344343223"
+aws_secret_key=**********
+aws_key="AKIA23QB2C6QOGNQF5NB"
+
+#!bin/bash
+
+#Take Parameters
+db_name=$MySqldb_name
+db_host=$MySqldb_host
+db_password=$mysql_password
+aws_access_key=$aws_key
+aws_secret=$aws_secret_key
+aws_bucketname=$aws_s3_bucket
+currentDate=$(date +%H-%M-%S)
+
+#Export AWS Variables
+export AWS_ACCESS_KEY_ID=$aws_access_key
+export AWS_SECRET_ACCESS_KEY=$aws_secret
+export AWS_DEFAULT_REGION=us-east-1
+
+#Creates Backup for DB
+mysqldump -u root -h $db_host --password=$db_password $db_name > /tmp/MySqlBackup-$currentDate.sql
+#Upload it to the aws
+aws s3 cp /tmp/MySqlBackup-$currentDate.sql s3://$aws_bucketname
+
+[SSH] executing...
+mysqldump: Got error: 1045: "Access denied for user 'root'@'172.25.0.2' (using password: YES)" when trying to connect
+upload: ../../tmp/MySqlBackup-12-59-21.sql to s3://jenkins-mysql-backup2344343223/MySqlBackup-12-59-21.sql
+
+[SSH] completed
+[SSH] exit-status: 0
+
+Finished: SUCCESS

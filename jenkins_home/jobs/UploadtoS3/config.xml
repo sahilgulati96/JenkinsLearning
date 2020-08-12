@@ -1,0 +1,84 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>MySqldb_name</name>
+          <description></description>
+          <defaultValue>testdb</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>MySqldb_host</name>
+          <description></description>
+          <defaultValue>db_host</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>aws_s3_bucket</name>
+          <description></description>
+          <defaultValue>jenkins-mysql-backup2344343223</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>aws_key</name>
+          <description></description>
+          <defaultValue>AKIA23QB2C6QOGNQF5NB</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jvnet.hudson.plugins.SSHBuilder plugin="ssh@2.6.1">
+      <siteName>remote_user@opensshServer:22</siteName>
+      <command>#!bin/bash
+
+#Take Parameters
+db_name=$MySqldb_name
+db_host=$MySqldb_host
+db_password=$mysql_password
+aws_access_key=$aws_key
+aws_secret=$aws_secret_key
+aws_bucketname=$aws_s3_bucket
+currentDate=$(date +%H-%M-%S)
+
+#Export AWS Variables
+export AWS_ACCESS_KEY_ID=$aws_access_key
+export AWS_SECRET_ACCESS_KEY=$aws_secret
+export AWS_DEFAULT_REGION=us-east-1
+
+#Creates Backup for DB
+mysqldump -u root -h $db_host --password=$db_password $db_name &gt; /tmp/MySqlBackup-$currentDate.sql
+#Upload it to the aws
+aws s3 cp /tmp/MySqlBackup-$currentDate.sql s3://$aws_bucketname</command>
+      <execEachLine>false</execEachLine>
+      <hideCommand>false</hideCommand>
+    </org.jvnet.hudson.plugins.SSHBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.23">
+      <bindings>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>aws_secret_key</credentialsId>
+          <variable>aws_secret_key</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>db_password</credentialsId>
+          <variable>mysql_password</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+      </bindings>
+    </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
+  </buildWrappers>
+</project>
