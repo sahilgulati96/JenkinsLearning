@@ -1,7 +1,9 @@
 version: '3'
 services: 
     jenkins:
-        image: 'jenkins/jenkins:lts'
+        build:
+            dockerfile: dockerfile
+            context: ./jenkins_ansible
         ports: 
             - "4000:8080"
         volumes: 

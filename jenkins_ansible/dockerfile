@@ -1,0 +1,9 @@
+FROM jenkins/jenkins
+
+USER root
+
+RUN apt update -y && \
+apt install software-properties-common -y && \
+apt install ansible -y
+
+USER jenkins
