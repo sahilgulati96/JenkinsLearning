@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:31.579 UTC</timestamp>
+  <md5sum>37ecd9ca89fd1dd26a6dacf36e382290</md5sum>
+  <fileName>uk.com.robust-it:cloning-1.9.2.jar</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

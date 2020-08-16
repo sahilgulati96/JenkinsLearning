@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:30.758 UTC</timestamp>
+  <md5sum>540b1256d887a6993ecbef23371a3302</md5sum>
+  <fileName>org.apache.commons:commons-lang3-3.8.1.jar</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:31.413 UTC</timestamp>
+  <md5sum>c0fd63acec238f02ab6ee8df40517bc5</md5sum>
+  <fileName>javax.xml.bind:activation-1.0.2.jar</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

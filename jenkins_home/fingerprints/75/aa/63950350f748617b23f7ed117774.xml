@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:31.669 UTC</timestamp>
+  <md5sum>75aa63950350f748617b23f7ed117774</md5sum>
+  <fileName>org.apache.poi:poi-4.1.1.jar</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

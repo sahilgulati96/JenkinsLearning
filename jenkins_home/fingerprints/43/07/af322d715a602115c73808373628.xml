@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:31.574 UTC</timestamp>
+  <md5sum>4307af322d715a602115c73808373628</md5sum>
+  <fileName>org.seleniumhq.selenium:selenium-firefox-driver-3.141.59.jar</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

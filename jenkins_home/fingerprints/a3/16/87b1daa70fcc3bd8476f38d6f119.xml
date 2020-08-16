@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:33:30.103 UTC</timestamp>
+  <original>
+    <name>MavenProject/MySeleniumProject:MySeleniumProject</name>
+    <number>4</number>
+  </original>
+  <md5sum>a31687b1daa70fcc3bd8476f38d6f119</md5sum>
+  <fileName>MySeleniumProject:MySeleniumProject:pom.xml</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject/MySeleniumProject:MySeleniumProject</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

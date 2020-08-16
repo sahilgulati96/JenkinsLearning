@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-16 16:29:18.198 UTC</timestamp>
+  <md5sum>e7fe3bb19b72cd1bf9a934db08343242</md5sum>
+  <fileName>Credential id=00e67250-ca1e-4996-be64-ee187232f284 name=sahilgulati102@gmail.com/****** (Github Credentials)</fileName>
+  <usages>
+    <entry>
+      <string>MavenProject</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

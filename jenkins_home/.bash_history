@@ -30,3 +30,5 @@ cd ansible/
 ansible-playbook -i hosts play.yml 
 cd /var/jenkins_home/ansible/
 ls
+java -version
+$JAVA_HOME

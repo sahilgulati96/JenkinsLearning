@@ -1,0 +1,217 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.catools</groupId>
+    <artifactId>extentreport</artifactId>
+    <version>0.1.15</version>
+    <packaging>jar</packaging>
+
+    <scm>
+        <tag>HEAD</tag>
+        <url>scm:git:https://gitlab.com/catools/extentreport.git</url>
+    </scm>
+
+    <name>Core Automation Extent Report</name>
+    <description>The Extent Report implementation</description>
+    <url>https://gitlab.com/catools/extentreport.git</url>
+
+    <developers>
+        <developer>
+            <name>Alireza Keshmiri</name>
+            <email>kimiak2000@gmail.com</email>
+            <url>https://www.linkedin.com/in/akeshmiri</url>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compiler.target>11</compiler.target>
+
+        <!-- Versions -->
+        <extent.reports.version>4.0.9</extent.reports.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <log4j.version>2.12.1</log4j.version>
+        <catools.version>0.1.15</catools.version>
+
+        <jmockit.version>1.44</jmockit.version>
+        <!-- /Versions -->
+
+        <!-- Extent Report -->
+        <EXTENT_REPORT_ENABLE/>
+        <EXTENT_REPORT_NAME/>
+        <EXTENT_REPORT_FILE_NAME/>
+
+        <!-- TestNG -->
+        <TESTNG_THREAD_COUNT/>
+        <TESTNG_LISTENERS/>
+        <TESTNG_TEST_PACKAGES/>
+        <TESTNG_BASE_TEST_CLASS_LOADER/>
+        <TESTNG_SKIP_CLASS_WITH_AWAITING_TEST/>
+        <TESTNG_SKIP_CLASS_WITH_IGNORED_TEST/>
+        <TESTNG_TEST_RETRY_COUNT>1</TESTNG_TEST_RETRY_COUNT>
+        <TESTNG_SUITE_RETRY_COUNT>1</TESTNG_SUITE_RETRY_COUNT>
+
+        <!-- Repository Path -->
+        <mvn.repo.url>https://repo.maven.apache.org/maven2</mvn.repo.url>
+        <mvn.spring.repo.url>https://repo.spring.io/plugins-release/</mvn.spring.repo.url>
+        <repo.snapshot.url>https://oss.sonatype.org/content/repositories/snapshots</repo.snapshot.url>
+        <repo.release.url>https://oss.sonatype.org/service/local/staging/deploy/maven2</repo.release.url>
+    </properties>
+    <repositories>
+        <repository>
+            <id>maven</id>
+            <url>${mvn.repo.url}</url>
+        </repository>
+        <repository>
+            <id>snapshot</id>
+            <url>${repo.snapshot.url}</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring</id>
+            <url>${mvn.spring.repo.url}</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <url>${repo.snapshot.url}</url>
+        </snapshotRepository>
+        <repository>
+            <id>central</id>
+            <url>${repo.release.url}</url>
+        </repository>
+    </distributionManagement>
+    <dependencies>
+        <!-- ######################  CATS ######################### -->
+        <dependency>
+            <groupId>org.catools</groupId>
+            <artifactId>common-testng</artifactId>
+            <version>${catools.version}</version>
+        </dependency>
+        <!-- ######################  /CATS ######################### -->
+        <!-- ######################  REPORTS ######################### -->
+        <!-- Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extent.reports.version}</version>
+        </dependency>
+        <!-- /Extent Reports -->
+        <!-- ###################### /REPORTS ######################### -->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <additionalOptions>
+                        <additionalOption>-Xdoclint:none</additionalOption>
+                    </additionalOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>${compiler.target}</source>
+                        <target>${compiler.target}</target>
+                        <release>${compiler.target}</release>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>release</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <additionalOptions>
+                                <additionalOption>-Xdoclint:none</additionalOption>
+                            </additionalOptions>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

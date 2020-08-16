@@ -1,0 +1,13 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/env
+[env] $ /bin/sh -xe /tmp/jenkins5028455216630923662.sh
++ echo Build number for this is 2
+Build number for this is 2
++ echo Build id is 2
+Build id is 2
++ echo Build url is http://localhost:4000/job/env/2/
+Build url is http://localhost:4000/job/env/2/
++ echo This is my Custom global varible
+This is my Custom global varible
+Finished: SUCCESS

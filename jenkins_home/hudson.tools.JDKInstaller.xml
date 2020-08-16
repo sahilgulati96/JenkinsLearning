@@ -1,0 +1,5 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.tools.JDKInstaller_-DescriptorImpl plugin="jdk-tool@1.4">
+  <username>sahilgulati102@gmail.com</username>
+  <password>{AQAAABAAAAAQnoyAp3zrnHTVhm4Mr5yd+vw76qrvk/gqwxA2U/CNLPo=}</password>
+</hudson.tools.JDKInstaller_-DescriptorImpl>

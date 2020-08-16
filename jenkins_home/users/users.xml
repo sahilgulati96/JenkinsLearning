@@ -3,6 +3,10 @@
   <version>1</version>
   <idToDirectoryNameMap class="concurrent-hash-map">
     <entry>
+      <string>remote_trigger</string>
+      <string>remotetrigger_1800983139091543182</string>
+    </entry>
+    <entry>
       <string>sahil</string>
       <string>sahil_7661385896499968714</string>
     </entry>

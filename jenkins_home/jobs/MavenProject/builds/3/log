@@ -1,0 +1,8 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/MavenProject
+Unpacking https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.6.3/apache-maven-3.6.3-bin.zip to /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.6.3 on Jenkins
+Parsing POMs
+ERROR: No such file /var/jenkins_home/workspace/MavenProject/pom.xml
+Perhaps you need to specify the correct POM file path in the project configuration?
+Finished: FAILURE
