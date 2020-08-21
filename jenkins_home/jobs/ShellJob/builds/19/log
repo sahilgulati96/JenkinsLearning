@@ -1,0 +1,13 @@
+Started by user [8mha:////4BCCcBqHTQzSqovfL2KNM2dxazxVzhFrpSq+Gl/4d/hqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZu/dLi1CL94sSMzBwA9yHVnsAAAAA=[0mSahil Gulati
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ShellJob
+No emails were triggered.
+[ShellJob] $ /bin/sh -xe /tmp/jenkins2382332623616292655.sh
++ /tmp/script.sh Sahil Gulati true
+/tmp/jenkins2382332623616292655.sh: 2: /tmp/jenkins2382332623616292655.sh: /tmp/script.sh: not found
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: sahilgulati340@gmail.com
+Email was triggered for: Failure - Any
+Sending email for trigger: Failure - Any
+An attempt to send an e-mail to empty list of recipients, ignored.
+Finished: FAILURE

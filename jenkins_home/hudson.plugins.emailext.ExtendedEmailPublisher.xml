@@ -1,9 +1,9 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.74">
+<hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.75">
   <defaultSuffix></defaultSuffix>
   <mailAccount>
     <address>address not configured yet &lt;nobody@nowhere&gt;</address>
-    <smtpHost></smtpHost>
+    <smtpHost>email-smtp.us-east-1.amazonaws.com</smtpHost>
     <smtpPort>25</smtpPort>
     <smtpUsername></smtpUsername>
     <smtpPassword>{AQAAABAAAAAQLgUAwbCrY69bYS4lcp9FSYIoI01VGV/hGcC8t1CueWI=}</smtpPassword>
