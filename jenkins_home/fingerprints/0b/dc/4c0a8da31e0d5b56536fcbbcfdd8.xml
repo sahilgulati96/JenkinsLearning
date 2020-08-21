@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-21 10:39:36.429 UTC</timestamp>
+  <original>
+    <name>mavenJobs/com.mycompany.app:my-app</name>
+    <number>5</number>
+  </original>
+  <md5sum>0bdc4c0a8da31e0d5b56536fcbbcfdd8</md5sum>
+  <fileName>com.mycompany.app:my-app-1.0-SNAPSHOT.jar</fileName>
+  <usages>
+    <entry>
+      <string>mavenJobs</string>
+      <ranges>5</ranges>
+    </entry>
+    <entry>
+      <string>mavenJobs/com.mycompany.app:my-app</string>
+      <ranges>5</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
