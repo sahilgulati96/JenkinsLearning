@@ -1,0 +1,51 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <javaposse.jobdsl.plugin.ExecuteDslScripts plugin="job-dsl@1.77">
+      <scriptText>job(&apos;Maven Through DSL&apos;) {
+description(&apos;This is a maven DSL Job&apos;)
+ scm {
+        github(&apos;jenkins-docs/simple-java-maven-app&apos;, &apos;master&apos;)
+    }
+ steps {
+ maven {
+ mavenInstallation(&apos;Maven 3.6.3&apos;)
+ rootPOM(&apos;/var/jenkins_home/workspace/Maven Through DSL/pom.xml&apos;)
+ goals(&apos;clean test package&apos;)
+ }
+ shell(&apos;echo Deploying the JAR Application;java -jar &quot;/var/jenkins_home/workspace/Maven Through DSL/target/my-app-1.0-SNAPSHOT.jar&quot;&apos;)
+ }
+     publishers {
+        archiveArtifacts {
+            pattern(&apos;target/*&apos;)
+            onlyIfSuccessful()
+        }
+    }
+}</scriptText>
+      <usingScriptText>true</usingScriptText>
+      <sandbox>false</sandbox>
+      <ignoreExisting>false</ignoreExisting>
+      <ignoreMissingFiles>false</ignoreMissingFiles>
+      <failOnMissingPlugin>false</failOnMissingPlugin>
+      <failOnSeedCollision>false</failOnSeedCollision>
+      <unstableOnDeprecation>false</unstableOnDeprecation>
+      <removedJobAction>IGNORE</removedJobAction>
+      <removedViewAction>IGNORE</removedViewAction>
+      <removedConfigFilesAction>IGNORE</removedConfigFilesAction>
+      <lookupStrategy>JENKINS_ROOT</lookupStrategy>
+    </javaposse.jobdsl.plugin.ExecuteDslScripts>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

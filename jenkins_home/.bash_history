@@ -32,3 +32,18 @@ cd /var/jenkins_home/ansible/
 ls
 java -version
 $JAVA_HOME
+job('Maven Through DSL') {
+description('This is a maven DSL Job')
+ scm {
+        github('jenkins-docs/simple-java-maven-app', 'master')
+    }
+ steps {
+ maven {
+ rootPOM('/var/jenkins_home/workspace/Maven Through DSL/pom.xml')
+ goals('clean test pacakge')
+ }
+ 
+ }
+}clear
+mvn -f "/var/jenkins_home/workspace/Maven Through DSL/pom.xml" clean test 
+exit

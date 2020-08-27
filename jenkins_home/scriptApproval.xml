@@ -2,6 +2,22 @@
 <scriptApproval plugin="script-security@1.74">
   <approvedScriptHashes>
     <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>0baa58d8792eead3ce60abdc076e37eda77923e6</string>
+    <string>2f942d084857896e016a008dcc1c203b8e6c5525</string>
+    <string>322d7799f48840738e6c1b6e0315be26af9b0e9a</string>
+    <string>33ffd9a891a634dd1060c8b7dcf96df635a4dbb4</string>
+    <string>3db4e5d98f701570934570c983edf2be3b80ec5e</string>
+    <string>444fcdb001577422ce4e07f57d1fa36b46223e8a</string>
+    <string>62c885f37b9e1283c0b07d9ed70aafbaf5b2def8</string>
+    <string>77c16139b9897e7a35345a946c07ad4bcfbaa552</string>
+    <string>9442d1522ef60263add6f5235f153954024e2971</string>
+    <string>b1707ddc48326ea725afb6ff8b89f16c50ca239f</string>
+    <string>b7c97014ef62a2972ea9809110b77e657084f92a</string>
+    <string>ba5d419ba50b7ba85074a0a6ec38dba6ae6847d5</string>
+    <string>d56218276bc291ef3d1d38f1499e067cf6269d33</string>
+    <string>da38707a6dee252dfc748dbcf96b3669f9bf3f37</string>
+    <string>da6e7239ef6c23fe8eddf70464666a4b4891406b</string>
+    <string>fe35031688c142893fd3bf48747660a69a9c2cab</string>
   </approvedScriptHashes>
   <approvedSignatures/>
   <aclApprovedSignatures/>
