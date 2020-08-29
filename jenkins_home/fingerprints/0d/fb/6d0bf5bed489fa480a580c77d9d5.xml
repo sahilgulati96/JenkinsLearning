@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-08-29 06:23:27.885 UTC</timestamp>
+  <md5sum>0dfb6d0bf5bed489fa480a580c77d9d5</md5sum>
+  <fileName>Credential id=secret name=testing pipeline env variables</fileName>
+  <usages>
+    <entry>
+      <string>Pipeline/EnvironmentVariables</string>
+      <ranges>4-5</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
