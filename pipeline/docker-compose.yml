@@ -1,0 +1,13 @@
+version: '3'
+services:
+    centosserver:
+        build:
+            dockerfile: dockerfile
+            context: .
+        volumes: 
+            - "/sys/fs/cgroup:/sys/fs/cgroup"
+        privileged: true
+        networks: 
+            - net
+networks:
+    net:

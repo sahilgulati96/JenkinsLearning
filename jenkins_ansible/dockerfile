@@ -1,4 +1,4 @@
-FROM jenkins/jenkins
+FROM sahilgulati102/jenkinswithdocker:01
 
 USER root
 

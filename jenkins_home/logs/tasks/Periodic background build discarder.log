@@ -1,14 +1,10 @@
-Started at Thu Aug 27 12:38:34 UTC 2020
+Started at Sat Aug 29 11:17:11 UTC 2020
 Processing AnsibleTest
 Offering AnsibleTest to Project Build Discarder
 Processing env
 Offering env to Project Build Discarder
 Processing job-dsl
 Offering job-dsl to Project Build Discarder
-Processing job_dsl_example
-Offering job_dsl_example to Project Build Discarder
-Processing job_dsl_firstJob
-Offering job_dsl_firstJob to Project Build Discarder
 Processing Maven Through DSL
 Offering Maven Through DSL to Project Build Discarder
 Processing mavenJobs
@@ -19,6 +15,14 @@ Processing ShellJob
 Offering ShellJob to Project Build Discarder
 Processing UploadtoS3
 Offering UploadtoS3 to Project Build Discarder
+Processing Pipeline/EnvironmentVariables
+Offering Pipeline/EnvironmentVariables to Project Build Discarder
+Processing Pipeline/RetryCommand
+Offering Pipeline/RetryCommand to Project Build Discarder
+Processing Pipeline/postactions
+Offering Pipeline/postactions to Project Build Discarder
+Processing Pipeline/simplepipeline
+Offering Pipeline/simplepipeline to Project Build Discarder
 Processing mavenJobs/com.mycompany.app:my-app
 Offering mavenJobs/com.mycompany.app:my-app to Project Build Discarder
-Finished at Thu Aug 27 12:38:34 UTC 2020. 7ms
+Finished at Sat Aug 29 11:17:11 UTC 2020. 28ms
